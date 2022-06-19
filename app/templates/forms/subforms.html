@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet">
+</head>
+
+<body>
+    {% for form in content['my_forms'] %}
+    <p>{{form['form']['form'][0]}}</p>
+    {% endfor %}
+    <button onclick="location.href='/'">BACK</button>
+</body>
+
+</html>

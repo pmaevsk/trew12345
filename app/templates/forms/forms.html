@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button onclick="location.href='/'">BACK TO THE MENU</button>
+    <form id="multi_form" method="POST" name="entire_form">
+        <div>
+            <button id="add_field" type="button">ADD FIELD</button>
+            <button type="submit" form="multi_form" value="Submit">SUBMIT</button>
+            <div id="inputs">
+                <div>
+                    <input type="text" name="input-0" placeholder="Enter something" autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var amount = 0;
+        $("#add_field").click(function () {
+            var new_field = '';
+            amount++;
+            new_field += '<div>';
+            new_field += `<input type="text" name="input-${amount}" placeholder="Enter something" autocomplete="off">`;
+
+            $('#inputs').append(new_field);
+
+        });
+    </script>
+</body>
+
+</html>

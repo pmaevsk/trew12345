@@ -20,3 +20,6 @@ include/
 include/*
 
 trew12345_env/
+
+*/.env
+.*env
